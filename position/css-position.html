@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position</title>
+    <link rel="stylesheet" href="css-position.css" />
+  </head>
+  <body>
+    <h3>CSS Position</h3>
+    <main class="container">
+      <div class="relative-wrapper">
+        <div class="view">
+          <div class="fruit-container">
+            <div class="fruit">apple</div>
+            <div id="orange" class="fruit bg-selected">orange</div>
+            <div class="fruit">banana</div>
+            <div class="fruit">avocado</div>
+          </div>
+        </div>
+        <div class="relative-info">
+          <div class="css-info-child">
+            <label>Selected Element : </label>
+            <span>orange</span>
+          </div>
+          <div class="relative-info-child">
+            <label>position</label>
+            <input type="text" value="relative" readonly />
+          </div>
+          <div class="relative-info-child">
+            <label>top</label>
+            <input id="top" value="0" type="number" />
+          </div>
+          <div class="relative-info-child">
+            <label>right</label>
+            <input id="right" value="0" type="number" />
+          </div>
+          <div class="relative-info-child">
+            <label>bottom</label>
+            <input id="bottom" value="0" type="number" />
+          </div>
+          <div class="relative-info-child">
+            <label>left</label>
+            <input id="left" value="0" type="number" />
+          </div>
+        </div>
+      </div>
+
+      <div class="change"></div>
+
+      <script src="css-position.js"></script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1b1a17;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  color: #ff8303;
+}
+
+.container {
+  background-color: #f0e3ca;
+  margin: 0 auto;
+  width: 1024px;
+  min-height: 640px;
+}
+
+.relative-wrapper {
+  border: 1px solid #1b1a17;
+  width: 100%;
+  height: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.view .fruit-container {
+  display: flex;
+  justify-content: center;
+  border: 3px solid red;
+  width: 60%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.fruit {
+  margin: 0px 3px;
+  width: 80px;
+  height: 80px;
+  background-color: #a35709;
+  color: #f0e3ca;
+  border: 1px solid #1b1a17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  user-select: none;
+}
+.view .fruit:hover {
+  background-color: #ff8303;
+  cursor: pointer;
+}
+
+.relative-info {
+  width: 35%;
+  padding: 10px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.relative-info-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.change {
+  border: 1px solid #1b1a17;
+  width: 100%;
+  height: 320px;
+}
+
+.bg-selected {
+  background-color: #ff8303;
+}
+
+#orange {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
