@@ -1,8 +1,71 @@
-const fruits = document.querySelectorAll(".fruit");
-// fruits.forEach((fruit) => {});
+const showCss = () => {
+  const changeTag = document.getElementsByClassName("change")[0];
+  const selectElement = document.getElementById("orange");
+  console.log(typeof selectElement.style.bottom);
+  changeTag.innerHTML = `<pre>
+  #orange{
+      position : ${selectElement.style.position};
+     ${
+       selectElement.style.top !== ""
+         ? "top : " + selectElement.style.top + ";"
+         : ""
+     }
+     ${
+       selectElement.style.left !== ""
+         ? "left : " + selectElement.style.left + ";"
+         : ""
+     }
+    
+     ${
+       selectElement.style.right !== ""
+         ? "right : " + selectElement.style.right + ";"
+         : ""
+     }
+     ${
+       selectElement.style.bottom !== ""
+         ? "bottom : " + selectElement.style.bottom + ";"
+         : ""
+     }
+  }
+  </pre>`;
+};
+////////////////////////////////
+const selectElement = document.getElementById("orange");
+selectElement.style.position = "relative";
+/////////////////////////////////
+const changeTag = document.getElementsByClassName("change")[0];
+
+changeTag.innerHTML = `<pre>
+#orange{
+    position : ${selectElement.style.position};
+   ${
+     selectElement.style.top !== ""
+       ? "top : " + selectElement.style.top + ";"
+       : ""
+   }
+   ${
+     selectElement.style.left !== ""
+       ? "left : " + selectElement.style.left + ";"
+       : ""
+   }
+  
+   ${
+     selectElement.style.right !== ""
+       ? "right : " + selectElement.style.right + ";"
+       : ""
+   }
+   ${
+     selectElement.style.bottom !== ""
+       ? "bottom : " + selectElement.style.bottom + ";"
+       : ""
+   }
+}
+</pre>`;
+////////////////////////
 const positionHandler = (pos, selectElement, userChoiceValue) => {
   const selectElementTag = document.getElementById(selectElement);
   selectElementTag.style[pos] = userChoiceValue + "px";
+  showCss();
 };
 
 const topInput = document.getElementById("top");
@@ -18,7 +81,6 @@ topInput.addEventListener("change", () => {
     alert("You should not insert both top & bottom");
     window.location.reload();
   }
-
   positionHandler("top", "orange", topInput.value);
 });
 
@@ -28,7 +90,6 @@ bottomInput.addEventListener("change", () => {
     alert("You should not insert both top & bottom");
     window.location.reload();
   }
-
   positionHandler("bottom", "orange", bottomInput.value);
 });
 
@@ -40,7 +101,7 @@ leftInput.addEventListener("change", () => {
     alert("You should not insert both left & right");
     window.location.reload();
   }
-  const selectElement = document.getElementById("orange");
+
   positionHandler("left", "orange", leftInput.value);
 });
 
@@ -50,6 +111,8 @@ rightInput.addEventListener("change", () => {
     alert("You should not insert both left & right");
     window.location.reload();
   }
-  const selectElement = document.getElementById("orange");
+
   positionHandler("right", "orange", rightInput.value);
 });
+
+/////////////////////////////
